@@ -1,0 +1,1 @@
+This simple version of the Rock Paper Scissors game has been created as part of the Web Development track of [The Odin Project](https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors?ref=lnav#assignment).
