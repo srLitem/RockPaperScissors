@@ -1,64 +1,16 @@
 <!DOCTYPE html>
 <html>
-<script>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="buttonRow">
+        <button class="Rock">Rock</button>
+        <button class="Paper">Paper</button>
+        <button class="Scissors">Scissors</button>
+    </div>
+    <div id="results"></div>
+</body>
 
-    // Results List
-    let resultsArr = ["ROCK", "PAPER", "SCISSORS"]
-
-    //Function to return a random element from the results Array 
-    function computerPlay() {
-        
-        return resultsArr[Math.floor(Math.random() * resultsArr.length)]
-    }
-    // Function used to play a single Rock Paper Scissors match
-    function playRound(playerSelection, computerSelection) {
-        if (computerSelection === playerSelection) {
-            return `There is a tie! You both selected ${playerSelection}`;
-        } else {
-            switch (playerSelection) {
-                case 'ROCK':
-                    if (computerSelection == 'PAPER') {
-                        return `You Loose! ${computerSelection} beats ${playerSelection}`;
-                        break;
-                    }
-                    if (computerSelection == 'SCISSORS') {
-                        return `You win! ${playerSelection} beats ${computerSelection}`;
-                        break;
-                    }
-
-                case 'PAPER':
-                    if (computerSelection == 'ROCK') {
-                        return `You Win! ${playerSelection} beats ${computerSelection}`;
-                        break;
-                    }
-                    if (computerSelection == 'SCISSORS') {
-                        return `You Loose! ${computerSelection} beat ${playerSelection}`;
-                        break;
-                    }
-
-                case 'SCISSORS':
-                    if (computerSelection == 'ROCK') {
-                        return `You Loose! ${computerSelection} beats ${playerSelection}`;
-                        break;
-                    }
-                    if (computerSelection == 'PAPER') {
-                        return `You win! ${playerSelection} beat ${computerSelection}`;
-                        break;
-                    }
-            }
-        }
-
-    }
-    // Function used to play the game 5 times
-    function game(playerChoice){
-        for(let i = 0; i < 5; i++){
-            console.log(playRound(playerChoice, computerPlay()))
-        }
-    }
-
-    let userAnswer = prompt('Type: Rock, Paper or Scissors', 'Rock')
-    game(userAnswer.toUpperCase())
-
-</script>
-
+<script src="logic.js"></script>
 </html>
